@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Grid from '../components/Grid';
 
-const Main = () => {
-  return (
-    <h1>Main page</h1>
-  );
-};
+
+class Main extends Component {
+  render() {
+    return (
+      <>
+        <h1>Main page</h1>
+        <Grid />
+      </>
+    );
+  }
+}
 
 export default Main;
