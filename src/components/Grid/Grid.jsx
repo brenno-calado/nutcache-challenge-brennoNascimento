@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import GridItem from './GridItem';
+import GridItem from './GridItem/GridItem';
 
 class Grid extends Component {
   render() {

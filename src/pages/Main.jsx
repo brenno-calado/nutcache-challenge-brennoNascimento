@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Grid from '../components/Grid';
-import Header from '../components/Header';
+import Grid from '../components/Grid/Grid';
+import Header from '../components/Header/Header';
 
 const list = [
   {
