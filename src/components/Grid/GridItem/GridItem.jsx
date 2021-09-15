@@ -8,6 +8,8 @@ const GridItem = ({ employee }) => (
     <p>{ employee.email}</p>
     <time>{employee.startDate}</time>
     <p>{ employee.team }</p>
+    <button>Edit</button>
+    <button>Delete</button>
   </li>
 );
 
