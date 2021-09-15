@@ -7,7 +7,20 @@ class Grid extends Component {
   constructor() {
     super();
     this.state = {
-      list: null,
+      list: null, mockList: [
+        {
+          name: 'Brenn Edwards',
+          email: 'brenn.edwards@gmail.com',
+          startDate: '2021-09-14',
+          team: 'UX'
+        },
+        {
+          name: 'Brenn Edwards',
+          email: 'brenn.edwards@gmail.com',
+          startDate: '2021-09-14',
+          team: 'UX'
+        },
+      ]
     };
 
     this.getEmployees = this.getEmployees.bind(this);
@@ -19,15 +32,14 @@ class Grid extends Component {
         method: 'get',
         url: 'https://crudcrud.com/nutemployees',
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Header': 'Authorization',
-          responseType: 'json',
+          'Access-Control-Allow-Origin': 'https://crudcrud.com',
         }
       });
       console.log(response);
-      this.setState({ list: response.data });
+      this.setState({ list: this.state.mockList });
     } catch (error) {
       console.log(error);
+      this.setState({ list: this.state.mockList });
     }
   }
 

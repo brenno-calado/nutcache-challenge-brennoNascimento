@@ -12,8 +12,17 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  width: 100%;
+}
+
+.root {
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 code {
