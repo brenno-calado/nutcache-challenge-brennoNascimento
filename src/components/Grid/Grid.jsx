@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import GridItem from './GridItem/GridItem';
 import './Grid.css';
 
@@ -8,10 +9,30 @@ class Grid extends Component {
     this.state = {
       list: null,
     };
+
+    this.getEmployees = this.getEmployees.bind(this);
+  }
+
+  async getEmployees() {
+    try {
+      const response = await axios({
+        method: 'get',
+        url: 'https://crudcrud.com/nutemployees',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Header': 'Authorization',
+          responseType: 'json',
+        }
+      });
+      console.log(response);
+      this.setState({ list: response.data });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   componentDidMount() {
-
+    this.getEmployees();
   }
 
   render() {
