@@ -9,6 +9,7 @@ class Main extends Component {
         <Header />
         <main>
           <Grid />
+          <button className="create">+</button>
         </main>
       </>
     );
