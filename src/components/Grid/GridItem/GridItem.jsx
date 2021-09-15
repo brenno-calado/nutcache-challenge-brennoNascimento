@@ -14,7 +14,7 @@ const GridItem = ({ employee }) => (
 );
 
 GridItem.propTypes = {
-  employee: PropTypes.shape(PropTypes.string).isRequired,
+  employee: PropTypes.shape(PropTypes.string),
 };
 
 export default GridItem;

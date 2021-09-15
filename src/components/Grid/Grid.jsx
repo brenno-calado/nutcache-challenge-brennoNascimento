@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import GridItem from './GridItem/GridItem';
 import './Grid.css';
 
 class Grid extends Component {
+  constructor() {
+    super();
+    this.state = {
+      list: null,
+    };
+  }
+
+  componentDidMount() {
+
+  }
+
   render() {
-    const { list } = this.props;
+    const { list } = this.state;
     return(
-      <ul className="grid">
-        {list.map((employee, index) => (
-          <GridItem key={ index } employee={ employee } />
-        ))}
-      </ul>
+      !list ? <span>Loading...</span> : (
+        <ul className="grid">
+          {list.map((employee, index) => (
+            <GridItem key={ index } employee={ employee } />
+          ))}
+        </ul>
+      )
     );
   }
 }
-
-Grid.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 export default Grid;
