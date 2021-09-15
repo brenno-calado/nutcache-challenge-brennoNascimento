@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './GridItem.css';
 
 const GridItem = ({ employee }) => (
-  <li>
+  <li className="employee">
     <p>{ employee.name }</p>
     <p>{ employee.email}</p>
     <time>{employee.startDate}</time>

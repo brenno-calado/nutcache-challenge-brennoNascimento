@@ -1,0 +1,6 @@
+.employee {
+  border: solid 2px lightgray;
+  border-radius: 6px;
+  display: table-cell;
+  padding: 1em;
+}
