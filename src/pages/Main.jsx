@@ -17,7 +17,9 @@ class Main extends Component {
     return (
       <>
         <Header />
-        <Grid list={ list }/>
+        <main>
+          <Grid list={ list }/>
+        </main>
       </>
     );
   }
