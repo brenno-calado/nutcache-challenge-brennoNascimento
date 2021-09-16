@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import GridItem from './GridItem/GridItem';
 import './Grid.css';
 
@@ -28,14 +28,14 @@ class Grid extends Component {
 
   async getEmployees() {
     try {
-      const response = await axios({
-        method: 'get',
-        url: 'https://crudcrud.com/nutemployees',
-        headers: {
-          'Access-Control-Allow-Origin': 'https://crudcrud.com',
-        }
-      });
-      console.log(response);
+      // const response = await axios({
+      //   method: 'get',
+      //   url: 'https://crudcrud.com/nutemployees',
+      //   headers: {
+      //     'Access-Control-Allow-Origin': 'https://crudcrud.com',
+      //   }
+      // });
+      // console.log(response);
       this.setState({ list: this.state.mockList });
     } catch (error) {
       console.log(error);
