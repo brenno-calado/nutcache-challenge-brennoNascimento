@@ -1,5 +1,5 @@
 .create {
-  background-color: #62c7e1;
+  background-color: #b4dbff;
   border-radius: 50%;
   border: none;
   bottom: 1rem;
@@ -11,7 +11,7 @@
 }
 
 header {
-  background-color: #62c7e1;
+  background-color: #b4dbff;
   display: flex;
   justify-content: space-evenly;
 }
