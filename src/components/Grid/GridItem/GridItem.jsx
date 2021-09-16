@@ -26,10 +26,10 @@ const GridItem = ({ employee }) => {
             width="80px"
           />
         </section>
-        <p>{ employee.name }</p>
-        <p>{ employee.email}</p>
-        <time>{employee.startDate}</time>
-        <p>{ employee.team }</p>
+        <p>Name: { employee.name }</p>
+        <p>Email: { employee.email}</p>
+        <time>Start Date: {employee.startDate.split('-').reverse().slice(1).join('/')}</time>
+        <p>{ employee.team ? `Team: ${employee.team}` : '' }</p>
       </li>
       {!editModal ?
         null
