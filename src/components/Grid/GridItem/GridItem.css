@@ -1,5 +1,6 @@
 .employee {
-  border: solid 2px lightgray;
+  background-color: #c2dde54f;
+  border: solid 2px #c2dde54f;
   border-radius: 6px;
   display: table-cell;
   margin: 1em;
@@ -7,8 +8,10 @@
 }
 
 .employee > section {
-  width: 100%;
+  display: flex;
+  justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 .employee > section > button {
@@ -26,4 +29,8 @@
 
 .delete {
   right: -2rem;
+}
+
+.portrait {
+  border-radius: 50%;
 }

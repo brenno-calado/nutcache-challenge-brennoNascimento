@@ -12,8 +12,19 @@ const GridItem = ({ employee }) => {
     <>
       <li className="employee" id={ employee.id }>
         <section>
-          <button aria-label="edit" className="edit" onClick={() => setEditModal( !editModal )}>&#128221;</button>
-          <button aria-label="delete" className="delete" onClick={() => setDeleteModal( !deleteModal )}>&#10060;</button>
+          <button aria-label="edit" className="edit" onClick={() => setEditModal( !editModal )}>
+            <img alt="edit" aria-label="edit" src="/edit.png" width="30px" />
+          </button>
+          <button aria-label="delete" className="delete" onClick={() => setDeleteModal( !deleteModal )}>
+            <img alt="delete" aria-label="delete" src="/delete.png" width="30px" />
+          </button>
+          <img
+            className="portrait"
+            alt={` portrait of ${employee.name}`}
+            aria-label={` portrait of ${employee.name}`}
+            src="/person.jpeg"
+            width="80px"
+          />
         </section>
         <p>{ employee.name }</p>
         <p>{ employee.email}</p>
