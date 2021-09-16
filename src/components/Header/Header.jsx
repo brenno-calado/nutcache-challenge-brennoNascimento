@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => (
   <header>
-    <h1>Header</h1>
+    <h1>Nutcache Challenge</h1>
   </header>
 );
 
