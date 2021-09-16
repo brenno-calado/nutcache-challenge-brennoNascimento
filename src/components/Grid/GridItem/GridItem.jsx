@@ -6,13 +6,14 @@ import './GridItem.css';
 
 const GridItem = ({ employee }) => {
   const [editModal, setEditModal] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
 
   return (
     <>
       <li className="employee" id={ employee.id }>
         <section>
           <button aria-label="edit" className="edit" onClick={() => setEditModal( !editModal )}>&#128221;</button>
-          <button aria-label="delete" className="delete">&#10060;</button>
+          <button aria-label="delete" className="delete" onClick={() => setDeleteModal( !deleteModal )}>&#10060;</button>
         </section>
         <p>{ employee.name }</p>
         <p>{ employee.email}</p>
@@ -22,6 +23,11 @@ const GridItem = ({ employee }) => {
       {!editModal ?
         null
         : <Modal type="edit" toggle={() => setEditModal(false)} employee={ employee } />
+      }
+      {
+        !deleteModal ?
+          null
+          : <Modal type="delete" toggle={() => setDeleteModal(false)} employee={ employee } />
       }
     </>
   );
