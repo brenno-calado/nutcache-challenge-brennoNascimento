@@ -1,5 +1,5 @@
 .create {
-  background-color: lightgreen;
+  background-color: #62c7e1;
   border-radius: 50%;
   border: none;
   bottom: 1rem;
@@ -8,4 +8,10 @@
   position: absolute;
   right: 1rem;
   width: 50px;
+}
+
+header {
+  background-color: #62c7e1;
+  display: flex;
+  justify-content: space-evenly;
 }
