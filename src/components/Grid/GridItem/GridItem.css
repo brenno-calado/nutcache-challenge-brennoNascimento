@@ -2,5 +2,28 @@
   border: solid 2px lightgray;
   border-radius: 6px;
   display: table-cell;
+  margin: 1em;
   padding: 1em;
+}
+
+.employee > section {
+  width: 100%;
+  position: relative;
+}
+
+.employee > section > button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  font-size: 150%;
+  position: absolute;
+  top: -1rem;
+}
+
+.edit {
+  left: -2rem;
+}
+
+.delete {
+  right: -2rem;
 }

@@ -1,6 +1,7 @@
 aside {
   background-color: #0000007d;
   height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -11,14 +12,12 @@ form {
   align-items: flex-start;
   background-color: lavender;
   border-radius: 4px;
-  bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 1em;
   padding: 1em;
   position: absolute;
-  right: 3rem;
   z-index: 2;
 }
 

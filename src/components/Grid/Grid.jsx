@@ -10,12 +10,14 @@ class Grid extends Component {
       list: null,
       mockList: [
         {
+          id: 1,
           name: 'Brenn Edwards',
           email: 'brenn.edwards@gmail.com',
           startDate: '2021-09-14',
           team: 'UX'
         },
         {
+          id: 2,
           name: 'Brenn Edwards',
           email: 'brenn.edwards@gmail.com',
           startDate: '2021-09-14',
