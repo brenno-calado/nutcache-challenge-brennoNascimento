@@ -1,3 +1,33 @@
 aside {
-  border-radius: 25px;
+  background-color: #0000007d;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+form {
+  align-items: flex-start;
+  background-color: lavender;
+  border-radius: 4px;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+  position: absolute;
+  right: 3rem;
+  z-index: 2;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+input {
+  padding: 5px 0;
 }
