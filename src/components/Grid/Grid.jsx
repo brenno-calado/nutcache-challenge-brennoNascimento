@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import GridItem from './GridItem/GridItem';
 import './Grid.css';
 
@@ -7,7 +7,8 @@ class Grid extends Component {
   constructor() {
     super();
     this.state = {
-      list: null, mockList: [
+      list: null,
+      mockList: [
         {
           name: 'Brenn Edwards',
           email: 'brenn.edwards@gmail.com',
@@ -28,14 +29,11 @@ class Grid extends Component {
 
   async getEmployees() {
     try {
-      // const response = await axios({
-      //   method: 'get',
-      //   url: 'https://crudcrud.com/nutemployees',
-      //   headers: {
-      //     'Access-Control-Allow-Origin': 'https://crudcrud.com',
-      //   }
-      // });
-      // console.log(response);
+      const response = await axios({
+        method: 'get',
+        url: 'https://crudcrud.com/nutemployee',
+      });
+      console.log(response);
       this.setState({ list: this.state.mockList });
     } catch (error) {
       console.log(error);
@@ -50,7 +48,7 @@ class Grid extends Component {
   render() {
     const { list } = this.state;
     return(
-      !list ? <span>Loading...</span> : (
+      !list ? <div className="grid">Loading...</div> : (
         <ul className="grid">
           {list.map((employee, index) => (
             <GridItem key={ index } employee={ employee } />

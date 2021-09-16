@@ -17,7 +17,7 @@ class Main extends Component {
         <main>
           <Grid />
           <button className="create" onClick={() => this.setState({ createModal: !createModal })}>+</button>
-          {!createModal ? null : <Modal create toggle={() => this.setState({ createModal: false })} />}
+          {!createModal ? null : <Modal type="create" toggle={() => this.setState({ createModal: false })} />}
         </main>
       </>
     );
