@@ -8,6 +8,20 @@ class Grid extends Component {
     super();
     this.state = {
       list: null,
+      mockList: [
+        {
+          name: 'Brenn Edwards',
+          email: 'brenn.edwards@gmail.com',
+          startDate: '2021-09-14',
+          team: 'UX'
+        },
+        {
+          name: 'Brenn Edwards',
+          email: 'brenn.edwards@gmail.com',
+          startDate: '2021-09-14',
+          team: 'UX'
+        },
+      ]
     };
 
     this.getEmployees = this.getEmployees.bind(this);
@@ -17,17 +31,13 @@ class Grid extends Component {
     try {
       const response = await axios({
         method: 'get',
-        url: 'https://crudcrud.com/nutemployees',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Header': 'Authorization',
-          responseType: 'json',
-        }
+        url: 'https://crudcrud.com/nutemployee',
       });
       console.log(response);
-      this.setState({ list: response.data });
+      this.setState({ list: this.state.mockList });
     } catch (error) {
       console.log(error);
+      this.setState({ list: this.state.mockList });
     }
   }
 
@@ -38,7 +48,7 @@ class Grid extends Component {
   render() {
     const { list } = this.state;
     return(
-      !list ? <span>Loading...</span> : (
+      !list ? <div className="grid">Loading...</div> : (
         <ul className="grid">
           {list.map((employee, index) => (
             <GridItem key={ index } employee={ employee } />

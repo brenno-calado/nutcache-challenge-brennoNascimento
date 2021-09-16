@@ -1,7 +1,9 @@
 .grid {
-  align-content: space-around;
+  align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
+  height: 100vh;
   justify-content: space-evenly;
+  overflow-y: auto;
   padding: 0;
 }
