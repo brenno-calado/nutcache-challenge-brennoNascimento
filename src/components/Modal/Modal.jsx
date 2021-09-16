@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import crud from '../../api';
 import PropTypes from 'prop-types';
 import './Modal.css';
 
@@ -18,36 +18,6 @@ export const Modal = (props) => {
       startDate: '',
       team: '',
     } } = props;
-
-  const crud = {
-    create: async (data) => {
-      try {
-        const response = await axios({
-          method: 'POST',
-          url: 'https://crudcrud.com/nutemployee',
-          data,
-        });
-        console.log(response);
-      } catch (error) {
-        console.error(error);
-      }
-    },
-    delete: async (id) => {
-      console.log(id);
-    },
-    edit: async (data) => {
-      try {
-        const response = await axios({
-          method: 'POST',
-          url: `https://crudcrud.com/nutemployee/${employee.id}`,
-          data,
-        });
-        console.log(response);
-      } catch (error) {
-        console.error(error);
-      }
-    },
-  };
 
   const submit = (evt) => {
     evt.preventDefault();
@@ -79,11 +49,13 @@ export const Modal = (props) => {
         { type === 'delete' ? (
           <>
             <p>{`Are you sure you want to delete ${employee.name}?`}</p>
-            <button onClick={() => {
-              crud[type](employee.id);
-              toggle();
-            }}>Yes</button>
-            <button onClick={() => toggle()}>No</button>
+            <section className="options">
+              <button onClick={() => {
+                crud[type](employee.id);
+                toggle();
+              }}>Yes</button>
+              <button onClick={() => toggle()}>No</button>
+            </section>
           </>
         ) : (
           <>
