@@ -13,8 +13,17 @@ const GridItem = ({ employee }) => (
   </li>
 );
 
+GridItem.defaultProps = {
+  employee: undefined,
+};
+
 GridItem.propTypes = {
-  employee: PropTypes.shape(PropTypes.string),
+  employee: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    startDate: PropTypes.string,
+    team: PropTypes.string,
+  }).isRequired,
 };
 
 export default GridItem;

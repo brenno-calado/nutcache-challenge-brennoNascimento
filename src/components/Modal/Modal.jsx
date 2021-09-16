@@ -7,7 +7,7 @@ export const Modal = (props) => {
   return (
     <>
       <aside onClick={() => toggle()} />
-      <form>
+      <form onSubmit={(evt) => evt.preventDefault() }>
         <label htmlFor="name">
           Name:
           <input id="name" type="text" minLength="6" required autoFocus />
@@ -18,7 +18,7 @@ export const Modal = (props) => {
         </label>
         <label htmlFor="gender">
           Gender
-          <select id="gender">
+          <select id="gender" defaultValue="male">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
