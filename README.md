@@ -14,5 +14,7 @@
   - [x] Edit employee popup
   - [ ] People registration popup
   - [ ] Button to delete previously registered employee
-  - [ ] Button to edit previously registered employee 
+  - [ ] Button to edit previously registered employee
+
+  ![main page](/public/mainPage.jpg)
 
