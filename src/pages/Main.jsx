@@ -16,7 +16,7 @@ class Main extends Component {
         <Header />
         <main>
           <Grid />
-          <button className="create" onClick={() => this.setState({ createModal: !createModal })}>+</button>
+          <button aria-label="create employee" className="create" onClick={() => this.setState({ createModal: !createModal })}>+</button>
           {!createModal ? null : <Modal type="create" toggle={() => this.setState({ createModal: false })} />}
         </main>
       </>
