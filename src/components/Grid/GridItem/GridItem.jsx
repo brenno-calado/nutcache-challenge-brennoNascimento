@@ -26,7 +26,7 @@ const GridItem = ({ employee }) => {
             width="80px"
           />
         </section>
-        <p>Name: { employee.name }</p>
+        <h3>{ employee.name }</h3>
         <p>Email: { employee.email}</p>
         <time>Start Date: {employee.startDate.split('-').reverse().slice(1).join('/')}</time>
         <p>{ employee.team ? `Team: ${employee.team}` : '' }</p>
